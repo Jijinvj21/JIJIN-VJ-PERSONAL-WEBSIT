@@ -1,0 +1,120 @@
+form
+{
+  margin: auto;
+  width: 60%;
+  
+  
+}
+textarea
+{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+  width: 100%;
+  resize: vertical;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  padding-right: 1px;
+}
+input[type=text], select
+
+{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  
+  width: 100%;
+  resize: vertical;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+  padding-right: 1px;
+}
+input[type=email]
+{
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-right: 1px;
+  width: 100%;
+  resize: vertical;
+  border-radius: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #ccc;
+}
+input[type=submit]
+{
+  background-color: #292929;
+  color: white;
+  padding: 16px 30px;
+ 
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid white;
+  width: 50%;
+}
+
+
+/*
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  resize: vertical;
+  border-radius: 20px;
+}
+
+
+input[type=email]{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  resize: vertical;
+  border-radius: 20px;
+  
+
+}
+
+input[type=submit] {
+  background-color: #292929;
+  color: white;
+  padding: 16px 30px;
+ 
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+input[type=submit]:hover {
+  background-color: #020202;}
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
