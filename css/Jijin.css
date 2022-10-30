@@ -353,11 +353,13 @@ width: 20%;
 .mclogo
 {
   width: 25%;
+   border-radius: 30px;
   border-radius: 30px;
 }
 .atherlogo
 {
-  width: 25%;
+ width: 25%;
+  margin-left: 26%;
   border-radius: 30px;
 }
 
