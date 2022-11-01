@@ -5,7 +5,10 @@ font-family: 'Teko', sans-serif;
 */
 
 
+body{
 
+  height: 99vh !important;
+}
 .container-fluid {
   
   background-color:rgb(0, 0, 0);
@@ -470,7 +473,7 @@ width: 100%;
   
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 5vh;
+  height: 5vh !important;
  
 }
 
