@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Jijin.css">
+    <!-- <link rel="stylesheet" href="css/Jijin.css"> -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Document</title>
 </head>
@@ -13,22 +14,129 @@
   
       
      
-    <div class="box">
-            <form id="submit-form" action="">
-              
-              <input type="text" id="fname" name="name" placeholder="NAME">
-              
-              <input type="email" id="lname" name="email" placeholder="EMAIL">
-             
-              <textarea id="subject" name="message" placeholder="MESSAGE" style="height:170px"></textarea>
-              <input type="submit" value="Submit">
+    <div class="box" >
+            <form id="submit-form" action=""      >
+              <input type="text" name="name"  id="name" placeholder="Your Name" >
+          <p class="error" id="nameError"></p>
+     
+          <input type="email"  name="email" id="email" placeholder="Your Email" >
+          <p class="error" id="emailError"></p>
+      
+          <input type="text" name="subject" id="subject" placeholder="Subject" >
+          <p class="error" id="subjectError"></p>
+    
+          <textarea  name="message" id="message" rows="5" placeholder="Message" ></textarea>
+          <p class="error" id="messageError"></p>
+
+        <button onclick="sumbitData(event)"  class="button">Send Message</button>
+        <!-- <button type="submit" class="button button-a button-big button-rouded">Send Message</button> -->
             </form>
           </div>
          
+
+
+
+<!-- 
+          <input type="text" id="fname" name="name" placeholder="NAME">
+              
+          <input type="email" id="lname" name="email" placeholder="EMAIL">
+         
+          <textarea id="subject" name="message" placeholder="MESSAGE" style="height:170px"></textarea>
+          <input type="submit" value="Submit"> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
       <script>
-        $("#submit-form").submit((e)=>{
-            e.preventDefault()
+
+
+
+
+
+console.log("sarath");
+
+
+
+function sumbitData(event) {
+
+    event.preventDefault()
+    let error = true
+    let name = document.getElementById("name")
+    let email= document.getElementById("email")
+    let subject=document.getElementById("subject")
+    
+    let nameError = document.getElementById("nameError")
+    let emailError = document.getElementById("emailError")
+    let subjectError = document.getElementById("subjectError")
+    console.log(name.value);
+    if (name.value === ''|| name.value.length<3 || name.value.length>10) {
+        error = false;
+        nameError.innerHTML = "Please enter your name"
+    }else {  
+        nameError.innerHTML = ""
+    }
+    if (email.value === '' || email.value.indexOf('@')<=0 || (email.value.charAt(email.value.length-4)!='.')&&(email.value.charAt(email.value.length-3)!='.') ){
+        error = false;
+        emailError.innerHTML = "Please enter your email"
+    }else {  
+        emailError.innerHTML = ""
+    }
+
+
+//     // var x=document.myform.email.value;  
+// var atposition=email.value.indexOf("@");  
+// var dotposition=email.value.lastIndexOf(".");  
+// if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+//   // alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+//   nameError.innerHTML = "Please enter your name"
+//   return false;  
+//   }  
+
+
+
+
+
+
+
+    if (subject.value === '') {
+        error = false;
+        subjectError.innerHTML = "Please enter the subject"
+    }else {
+        subjectError.innerHTML = ""
+     }
+     if (message.value === '') {
+        error = false;
+        messageError.innerHTML = "Please enter the message"
+    }else {
+        messageError.innerHTML = ""
+     }
+
+    if (error===true) {
+        called()
+    }
+}
+
+
+
+
+
+
+        function called() {
+          console.log("Form Submitted")
+        // $("#submit-form").submit((e)=>{
+        //     e.preventDefault()
             $.ajax({
               url:'https://script.google.com/macros/s/AKfycbyJzdT8BeY1gbGJ6sswRDiL4tigYTocsrFS13DSvwCI0AemNLyQlhXv7sHEb03h3xx8jA/exec',
 		
@@ -44,7 +152,31 @@
     
                 }
             })
-        })
+        // })
+          }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         
